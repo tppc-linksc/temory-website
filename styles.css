@@ -76,6 +76,14 @@
     --grid-line: rgba(150, 183, 227, 0.05);
     --code: #050b14;
   }
+
+  :root:not([data-theme="light"]) .theme-app-icon {
+    content: url("assets/app-icon-dark.png");
+  }
+}
+
+:root[data-theme="dark"] .theme-app-icon {
+  content: url("assets/app-icon-dark.png");
 }
 
 * { box-sizing: border-box; }

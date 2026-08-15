@@ -2,6 +2,7 @@
   const root = document.documentElement;
   const themeButton = document.querySelector("[data-theme-toggle]");
   const darkQuery = window.matchMedia("(prefers-color-scheme: dark)");
+  const favicon = document.querySelector("[data-favicon]");
   const darkSource = document.querySelector("[data-dark-source]");
   const heroImage = document.querySelector("[data-hero-image]");
   const screenImage = document.querySelector("[data-screen-image]");
@@ -55,6 +56,7 @@
 
     if (darkSource) darkSource.media = isDark() ? "all" : "not all";
     if (heroImage) heroImage.src = isDark() ? "assets/home-dark.webp" : "assets/home-light.webp";
+    if (favicon) favicon.href = isDark() ? "assets/favicon-dark.png" : "assets/favicon-light.png";
     syncScreenImage(true);
 
     if (persist) {
