@@ -13,6 +13,22 @@ def optimize_app_icon(path: Path) -> None:
         icon.save(path, optimize=True)
 
 
+def reframe_dark_app_icon(path: Path) -> None:
+    surface = (17, 29, 46)
+
+    with Image.open(path) as source:
+        icon = source.convert("RGB").resize((512, 512), Image.Resampling.LANCZOS)
+
+    source_background = icon.getpixel((0, 0))
+    if source_background != surface:
+        icon.putdata([
+            surface if max(abs(channel - background) for channel, background in zip(pixel, source_background)) < 18 else pixel
+            for pixel in icon.getdata()
+        ])
+
+    icon.save(path, optimize=True)
+
+
 def make_favicon(source_path: Path, output_path: Path) -> None:
     canvas_size = 128
     icon_size = 112
@@ -34,6 +50,6 @@ def make_favicon(source_path: Path, output_path: Path) -> None:
     canvas.save(output_path, optimize=True)
 
 
-optimize_app_icon(ASSETS / "app-icon-dark.png")
+reframe_dark_app_icon(ASSETS / "app-icon-dark.png")
 make_favicon(ASSETS / "app-icon.png", ASSETS / "favicon-light.png")
 make_favicon(ASSETS / "app-icon-dark.png", ASSETS / "favicon-dark.png")
