@@ -319,7 +319,7 @@ svg { display: block; }
 
 .closing { min-height: 720px; display: flex; align-items: center; overflow: hidden; text-align: center; background: var(--bg); }
 .closing::after { position: absolute; inset: 0; content: ""; opacity: .68; background-image: radial-gradient(circle, color-mix(in srgb, var(--text) 18%, transparent) 0 1px, transparent 1.3px); background-size: 93px 93px; mask-image: radial-gradient(circle at center, #000, transparent 64%); }
-.closing-aura { position: absolute; top: 50%; left: 50%; width: 830px; height: 560px; transform: translate(-50%,-50%); background: radial-gradient(circle, color-mix(in srgb, var(--amber) 13%, transparent), color-mix(in srgb, var(--blue) 10%, transparent) 40%, transparent 70%); }
+.closing-aura { position: absolute; top: 50%; left: 50%; width: 700px; height: 700px; opacity: .82; transform: translate(-50%,-50%); background: radial-gradient(circle at center, color-mix(in srgb, var(--amber) 11%, transparent) 0 12%, color-mix(in srgb, var(--blue) 7%, transparent) 38%, transparent 70%); border-radius: 50%; filter: blur(22px); }
 .closing-inner { position: relative; z-index: 2; max-width: 740px; }
 .closing img { margin: 0 auto 25px; border-radius: 28px; box-shadow: 0 24px 60px rgba(20,31,50,.25); }
 .closing h2 { font-size: clamp(46px, 6.2vw, 72px); }
