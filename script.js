@@ -11,7 +11,7 @@
   const screenButtons = [...document.querySelectorAll("[data-screen]")];
   const labels = { auto: "跟随系统", light: "浅色", dark: "深色" };
   const screens = {
-    home: { light: "assets/home-light-apple.png?v=20260816-1", dark: "assets/home-dark-apple.png?v=20260816-1", alt: "拾光首页界面" },
+    home: { light: "assets/home-light-apple-v3.png?v=20260816-3", dark: "assets/home-dark-apple-v3.png?v=20260816-3", alt: "拾光首页界面" },
     timeline: { light: "assets/timeline-light.webp", dark: "assets/timeline-dark.webp", alt: "拾光时光轴界面" },
     ai: { light: "assets/ai-light.webp", dark: "assets/ai-dark.webp", alt: "拾光 AI 问答界面" }
   };
@@ -55,7 +55,7 @@
     }
 
     if (darkSource) darkSource.media = isDark() ? "all" : "not all";
-    if (heroImage) heroImage.src = isDark() ? "assets/home-dark-apple.png?v=20260816-1" : "assets/home-light-apple.png?v=20260816-1";
+    if (heroImage) heroImage.src = isDark() ? "assets/home-dark-apple-v3.png?v=20260816-3" : "assets/home-light-apple-v3.png?v=20260816-3";
     if (favicon) favicon.href = isDark() ? "assets/favicon-dark.png?v=20260815-4" : "assets/favicon-light.png?v=20260815-4";
     syncScreenImage(true);
 
