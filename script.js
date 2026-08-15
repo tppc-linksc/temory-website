@@ -56,7 +56,7 @@
 
     if (darkSource) darkSource.media = isDark() ? "all" : "not all";
     if (heroImage) heroImage.src = isDark() ? "assets/home-dark.webp" : "assets/home-light.webp";
-    if (favicon) favicon.href = isDark() ? "assets/favicon-dark.png?v=20260815-3" : "assets/favicon-light.png?v=20260815-3";
+    if (favicon) favicon.href = isDark() ? "assets/favicon-dark.png?v=20260815-4" : "assets/favicon-light.png?v=20260815-4";
     syncScreenImage(true);
 
     if (persist) {

@@ -31,9 +31,9 @@ def reframe_dark_app_icon(path: Path) -> None:
 
 def make_favicon(source_path: Path, output_path: Path) -> None:
     canvas_size = 128
-    icon_size = 112
+    icon_size = 124
     inset = (canvas_size - icon_size) // 2
-    radius = 25
+    radius = 28
     scale = 4
 
     with Image.open(source_path) as source:
