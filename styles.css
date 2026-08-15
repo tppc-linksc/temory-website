@@ -317,7 +317,7 @@ svg { display: block; }
 .android-symbol i::after { right: 7px; transform: rotate(30deg); }
 .harmony-symbol i { width: 35px; height: 35px; border: 3px solid #e84e50; border-radius: 50%; box-shadow: inset 0 0 0 4px var(--surface-strong), inset 0 0 0 6px #e84e50; }
 
-.closing { min-height: 720px; display: flex; align-items: center; overflow: hidden; text-align: center; background: var(--bg-soft); }
+.closing { min-height: 720px; display: flex; align-items: center; overflow: hidden; text-align: center; background: linear-gradient(180deg, var(--bg), var(--bg-soft) 18%, var(--bg-soft) 82%, var(--bg)); }
 .closing::after { position: absolute; inset: 0; content: ""; opacity: .68; background-image: radial-gradient(circle, color-mix(in srgb, var(--text) 18%, transparent) 0 1px, transparent 1.3px); background-size: 93px 93px; mask-image: radial-gradient(circle at center, #000, transparent 64%); }
 .closing-aura { position: absolute; top: 50%; left: 50%; width: 830px; height: 560px; transform: translate(-50%,-50%); background: radial-gradient(circle, color-mix(in srgb, var(--amber) 13%, transparent), color-mix(in srgb, var(--blue) 10%, transparent) 40%, transparent 70%); }
 .closing-inner { position: relative; z-index: 2; max-width: 740px; }
