@@ -23,6 +23,9 @@
   --shadow-soft: 0 12px 36px rgba(41, 52, 70, 0.08);
   --phone-shadow: 0 50px 120px rgba(21, 35, 60, 0.24), 0 18px 40px rgba(21, 35, 60, 0.14);
   --hero-glow: rgba(125, 171, 246, 0.36);
+  --closing-glow-core: rgba(245, 164, 58, 0.22);
+  --closing-glow-mid: rgba(94, 139, 224, 0.14);
+  --closing-glow-edge: rgba(125, 171, 246, 0.035);
   --grid-line: rgba(37, 63, 105, 0.06);
   --code: #0d1728;
   --control-bg: rgba(255, 255, 255, 0.76);
@@ -54,6 +57,9 @@
   --shadow-soft: 0 14px 40px rgba(0, 0, 0, 0.24);
   --phone-shadow: 0 58px 140px rgba(0, 0, 0, 0.52), 0 20px 50px rgba(0, 0, 0, 0.34);
   --hero-glow: rgba(32, 96, 184, 0.28);
+  --closing-glow-core: rgba(255, 179, 61, 0.09);
+  --closing-glow-mid: rgba(54, 96, 165, 0.07);
+  --closing-glow-edge: rgba(36, 69, 116, 0.02);
   --grid-line: rgba(150, 183, 227, 0.05);
   --code: #050b14;
   --control-bg: rgba(17, 29, 46, 0.78);
@@ -85,6 +91,9 @@
     --shadow-soft: 0 14px 40px rgba(0, 0, 0, 0.24);
     --phone-shadow: 0 58px 140px rgba(0, 0, 0, 0.52), 0 20px 50px rgba(0, 0, 0, 0.34);
     --hero-glow: rgba(32, 96, 184, 0.28);
+    --closing-glow-core: rgba(255, 179, 61, 0.09);
+    --closing-glow-mid: rgba(54, 96, 165, 0.07);
+    --closing-glow-edge: rgba(36, 69, 116, 0.02);
     --grid-line: rgba(150, 183, 227, 0.05);
     --code: #050b14;
     --control-bg: rgba(17, 29, 46, 0.78);
@@ -319,7 +328,7 @@ svg { display: block; }
 
 .closing { min-height: 720px; display: flex; align-items: center; overflow: hidden; text-align: center; background: var(--bg); }
 .closing::after { position: absolute; inset: 0; content: ""; opacity: .68; background-image: radial-gradient(circle, color-mix(in srgb, var(--text) 18%, transparent) 0 1px, transparent 1.3px); background-size: 93px 93px; mask-image: radial-gradient(circle at center, #000, transparent 64%); }
-.closing-aura { position: absolute; top: 50%; left: 50%; width: 700px; height: 700px; opacity: .82; transform: translate(-50%,-50%); background: radial-gradient(circle at center, color-mix(in srgb, var(--amber) 11%, transparent) 0 12%, color-mix(in srgb, var(--blue) 7%, transparent) 38%, transparent 70%); border-radius: 50%; filter: blur(22px); }
+.closing-aura { position: absolute; top: 50%; left: 50%; width: 760px; height: 760px; transform: translate(-50%,-50%); background: radial-gradient(circle at center, var(--closing-glow-core) 0%, var(--closing-glow-mid) 30%, var(--closing-glow-edge) 54%, transparent 76%); border-radius: 50%; filter: blur(48px); }
 .closing-inner { position: relative; z-index: 2; max-width: 740px; }
 .closing img { margin: 0 auto 25px; border-radius: 28px; box-shadow: 0 24px 60px rgba(20,31,50,.25); }
 .closing h2 { font-size: clamp(46px, 6.2vw, 72px); }
